@@ -9,6 +9,7 @@
 
 -- predefined type, no DDL - XMLTYPE
 
+--------------------création de la table client--------------------
 CREATE TABLE client (
     num_client NUMBER NOT NULL,
     prenom     VARCHAR2(50),
@@ -17,6 +18,7 @@ CREATE TABLE client (
     adresse    VARCHAR2(50)
 );
 
+--------------------insertion des données dans la table client--------------------
 INSERT INTO client (num_client, prenom, nom, telephone, adresse) VALUES (1,'Joe','Johnson','123-456-7890','12345 Rue Muir');
 INSERT INTO client (num_client, prenom, nom, telephone, adresse) VALUES (2,'LeBron','James','156-224-3366','10555 Avenue de Bois-de-Boulogne');
 INSERT INTO client (num_client, prenom, nom, telephone, adresse) VALUES (3,'Christian','Lemieux','826-102-1688','3833 Rue Cecil');
@@ -26,6 +28,7 @@ INSERT INTO client (num_client, prenom, nom, telephone, adresse) VALUES (6,'Emil
 
 ALTER TABLE client ADD CONSTRAINT client_pk PRIMARY KEY ( num_client );
 
+--------------------création de la table commande--------------------
 CREATE TABLE commande (
     id_commande       NUMBER NOT NULL,
     entrepot          VARCHAR2(50),
@@ -33,6 +36,7 @@ CREATE TABLE commande (
     client_num_client NUMBER NOT NULL
 );
 
+--------------------insertion des données dans la table commande--------------------
 INSERT INTO commande (id_commande, entrepot, date_livraison, client_num_client) VALUES (1,'Montr�al',to_date('09062024','DD-MM-YYYY'),1);
 INSERT INTO commande (id_commande, entrepot, date_livraison, client_num_client) VALUES (2,'Laval',to_date('13072024','DD-MM-YYYY'),2);
 INSERT INTO commande (id_commande, entrepot, date_livraison, client_num_client) VALUES (3,'Los Angeles',to_date('29052024','DD-MM-YYYY'),3);
@@ -42,6 +46,8 @@ INSERT INTO commande (id_commande, entrepot, date_livraison, client_num_client) 
 
 ALTER TABLE commande ADD CONSTRAINT commande_pk PRIMARY KEY ( id_commande );
 
+
+--------------------création de la table ordinateurs--------------------
 CREATE TABLE ordinateurs (
     numero               NUMBER NOT NULL,
     marque               VARCHAR2(30),
@@ -52,6 +58,7 @@ CREATE TABLE ordinateurs (
     commande_id_commande NUMBER NOT NULL
 );
 
+--------------------insertion des données dans la table ordinateurs--------------------
 INSERT INTO ordinateur (numero, marque, sys_exploitation, couleur,prix,description,commande_id_commande) VALUES (1,'Apple','MacOS Ventura','Gris',1500,'Macbook Pro 2018, 16 GB RAM, 1 TB SSD',1);
 INSERT INTO ordinateur (numero, marque, sys_exploitation, couleur,prix,description,commande_id_commande) VALUES (2,'Dell','Windows 10','Noir',1859,'Dell XPS 15, 24 GB RAM, 1 TB SSD',2);
 INSERT INTO ordinateur (numero, marque, sys_exploitation, couleur,prix,description,commande_id_commande) VALUES (3,'Asus','Windows 11','Noir',2500,'Zenbook Pro 15 OLED, 32 GB RAM, 2 TB SSD',3);
@@ -59,6 +66,8 @@ INSERT INTO ordinateur (numero, marque, sys_exploitation, couleur,prix,descripti
  
 ALTER TABLE ordinateurs ADD CONSTRAINT ordinateurs_pk PRIMARY KEY ( numero );
 
+
+--------------------création de la table tablette--------------------
 CREATE TABLE tablette (
     numero               NUMBER NOT NULL,
     couleur              VARCHAR2(30),
@@ -69,12 +78,12 @@ CREATE TABLE tablette (
     commande_id_commande NUMBER NOT NULL
 );
 
+--------------------insertion des données dans la table tablette--------------------
 INSERT INTO tablette (numero, couleur, prix, marque,cameras,description,commande_id_commande) VALUES (1,'Noir',2500,'Apple',3,'iPad Pro 2024, 13 pouces, 512 GB SSD, iPadOS 17',4);
 INSERT INTO tablette (numero, couleur, prix, marque,cameras,description,commande_id_commande) VALUES (2,'Gris',1600,'Apple',2,'iPad Air 2024, 11 pouces, 256 GB SSD, iPadOS 17',5);
 INSERT INTO tablette (numero, couleur, prix, marque,cameras,description,commande_id_commande) VALUES (3,'Noir',600,'Samsung',2,'Galaxy Tab S9 FE+, 12.4 pouces,128 GB SSD, Android 14',6);
 
  
-
 ALTER TABLE tablette ADD CONSTRAINT tablette_pk PRIMARY KEY ( numero );
 
 ALTER TABLE commande
