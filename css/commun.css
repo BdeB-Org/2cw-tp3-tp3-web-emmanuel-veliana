@@ -1,0 +1,21 @@
+.tr{
+    display: block;
+    color: white;
+    padding: 20px 50px;
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: #f2ece7;
+    color: #223366;
+}
+th{
+    font-size: 20px;
+    display: inline-block;
+    margin-right: 150px;
+    color: #000000;
+    text-align: center;
+}
