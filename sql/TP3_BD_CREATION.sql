@@ -59,9 +59,9 @@ CREATE TABLE ordinateurs (
 );
 
 --------------------insertion des données dans la table ordinateurs--------------------
-INSERT INTO ordinateur (numero, marque, sys_exploitation, couleur,prix,description,commande_id_commande) VALUES (1,'Apple','MacOS Ventura','Gris',1500,'Macbook Pro 2018, 16 GB RAM, 1 TB SSD',1);
-INSERT INTO ordinateur (numero, marque, sys_exploitation, couleur,prix,description,commande_id_commande) VALUES (2,'Dell','Windows 10','Noir',1859,'Dell XPS 15, 24 GB RAM, 1 TB SSD',2);
-INSERT INTO ordinateur (numero, marque, sys_exploitation, couleur,prix,description,commande_id_commande) VALUES (3,'Asus','Windows 11','Noir',2500,'Zenbook Pro 15 OLED, 32 GB RAM, 2 TB SSD',3);
+INSERT INTO ordinateurs (numero, marque, sys_exploitation, couleur,prix,description,commande_id_commande) VALUES (1,'Apple','MacOS Ventura','Gris',1500,'Macbook Pro 2018, 16 GB RAM, 1 TB SSD',1);
+INSERT INTO ordinateurs (numero, marque, sys_exploitation, couleur,prix,description,commande_id_commande) VALUES (2,'Dell','Windows 10','Noir',1859,'Dell XPS 15, 24 GB RAM, 1 TB SSD',2);
+INSERT INTO ordinateurs (numero, marque, sys_exploitation, couleur,prix,description,commande_id_commande) VALUES (3,'Asus','Windows 11','Noir',2500,'Zenbook Pro 15 OLED, 32 GB RAM, 2 TB SSD',3);
 
  
 ALTER TABLE ordinateurs ADD CONSTRAINT ordinateurs_pk PRIMARY KEY ( numero );
