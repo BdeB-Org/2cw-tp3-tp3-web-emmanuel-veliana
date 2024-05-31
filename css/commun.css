@@ -19,3 +19,18 @@ th{
     color: #000000;
     text-align: center;
 }
+.p1 {
+    height: 100px; 
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-color:aliceblue;
+}
+
+
