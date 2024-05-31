@@ -3,6 +3,7 @@
     color: white;
     padding: 20px 50px;
     text-decoration: none;
+    font-family: sans-serif;
 }
 th:last-child a {
     margin-right: 0; 
@@ -20,6 +21,7 @@ nav {
 nav a {
     color: black; /* Changer la couleur du texte ici */
     text-decoration: none;
+    border-radius: 20px;
 }
 
 th{
@@ -42,6 +44,7 @@ body {
     background-attachment: fixed; 
     background-color:aliceblue;
     font-size: 18px;
+    font-family: sans-serif;
 }
 
 
