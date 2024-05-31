@@ -4,14 +4,24 @@
     padding: 20px 50px;
     text-decoration: none;
 }
-nav{
+th:last-child a {
+    margin-right: 0; 
+}
+
+nav {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    background-color: #f2ece7;
-    color: #223366;
+    background-color:#f2ece7;
+   
+    padding-right: 20px;
 }
+nav a {
+    color: black; /* Changer la couleur du texte ici */
+    text-decoration: none;
+}
+
 th{
     font-size: 20px;
     display: inline-block;
