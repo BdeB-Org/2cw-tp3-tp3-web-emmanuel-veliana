@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
              let i= document.getElementById('tablettes-container').innerHTML = output;
             data.items.forEach(tablette => {
-                let r=document.createElement(`Marque: ${tablette.marque}, Couleur: ${tablette.couleur}, Prix: ${tablette.prix}€, Caméras: ${tablette.cameras}
+                let r=document.createElement(`Numero: ${tablette.numero}, Marque: ${tablette.marque}, Couleur: ${tablette.couleur}, Prix: ${tablette.prix}€, Caméras: ${tablette.cameras}
                 Description: ${tablette.description}`);
                 r=this.textContent= ` `;
                 i.appendChild(r);
