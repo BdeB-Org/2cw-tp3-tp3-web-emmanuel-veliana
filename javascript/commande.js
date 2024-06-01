@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('http://localhost:8080/ords/RESTSCOTT/tablette') 
+    fetch('http://localhost:8080/ords/RESTSCOTT/commande') 
         .then(response => response.json())
         .then(data => {
              let i= document.getElementById('commande-container').innerHTML = output;
